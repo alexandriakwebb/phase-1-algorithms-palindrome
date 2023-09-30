@@ -1,9 +1,23 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  let wordArray = word.split('')
+  let reverseArray = word.split('').reverse()
+  for (let i = 0; i < wordArray.length; i++) {
+    for (let j = 0; j < reverseArray.length; j++) {
+      if(wordArray[i] !== reverseArray[j]) {
+        return false 
+      } else {
+        return true
+      }
+    }
+  }
 }
 
+isPalindrome('alex')
+
 /* 
-  Add your pseudocode here
+  Take the word and turn it into an array (saved as a variable)
+  Save the reverse of that array as another variable. 
+  Loop through two variables and see if each index matches; if so return true.
 */
 
 /*
