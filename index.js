@@ -1,14 +1,11 @@
 function isPalindrome(word) {
-  let wordArray = word.split('')
-  let reverseArray = word.split('').reverse()
-  for (let i = 0; i < wordArray.length; i++) {
-    for (let j = 0; j < reverseArray.length; j++) {
-      if(wordArray[i] !== reverseArray[j]) {
-        return false 
-      } else {
-        return true
-      }
-    }
+  let wordArray = word.split('');
+  let reverseArray = wordArray.reverse();
+  let reverseWord = reverseArray.join('')
+  if(word === reverseWord){
+    return true
+  } else {
+    return false
   }
 }
 
